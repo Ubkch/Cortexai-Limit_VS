@@ -5,6 +5,7 @@
   "description": "Cortex API limit takibi by fusion",
   "version": "1.1.0",
   "engines": { "vscode": "^1.74.0" },
+  "repository": {"type": "git", "url": "https://github.com/Ubkch/Cortexai-Limit_VS"},
   "license": "MIT",
   "icon": "icon.png",
   "categories": ["Other"],
