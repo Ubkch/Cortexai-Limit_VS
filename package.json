@@ -1,0 +1,47 @@
+{
+  "name": "claude-api-limits",
+  "publisher": "local",
+  "displayName": "Claude API Limits",
+  "description": "claude.gg ve vertex.app API limit takibi — status bar",
+  "version": "1.1.0",
+  "engines": { "vscode": "^1.74.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "claudeApiLimits.refresh",
+        "title": "Claude API Limits: Yenile"
+      },
+      {
+        "command": "claudeApiLimits.setApiKey",
+        "title": "Claude API Limits: API Key Ayarla"
+      },
+      {
+        "command": "claudeApiLimits.selectProvider",
+        "title": "Claude API Limits: Provider Seç"
+      }
+    ],
+    "configuration": {
+      "title": "Claude API Limits",
+      "properties": {
+        "claudeApiLimits.provider": {
+          "type": "string",
+          "default": "claude.gg",
+          "enum": ["claude.gg", "vertex.app"],
+          "enumDescriptions": [
+            "claude.gg — https://claude.gg/api/me?key=sk-...",
+            "vertex.app — https://vertex.app/api/me?key=sk-..."
+          ],
+          "description": "API sağlayıcısı"
+        },
+        "claudeApiLimits.apiKey": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "API anahtarı — URL'deki `sk-...` değeri veya tam URL yapıştırılabilir"
+        }
+      }
+    }
+  }
+}
