@@ -4,8 +4,8 @@ const https = require("https");
 const REFRESH_MS = 30 * 1000;
 
 const PROVIDERS = {
-  "claude.gg":  "https://claude.gg/api/me?key=",
-  "vertex.app": "https://vertex.app/api/me?key=",
+  "claude.gg":        "https://claude.gg/api/me?key=",
+  "vertex.claude.gg": "https://vertex.claude.gg/api/me?key=",
 };
 
 let statusBar;

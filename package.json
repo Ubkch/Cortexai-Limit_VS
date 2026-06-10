@@ -2,7 +2,7 @@
   "name": "claude-api-limits",
   "publisher": "local",
   "displayName": "Claude API Limits",
-  "description": "claude.gg ve vertex.app API limit takibi — status bar",
+  "description": "Cortex API limit takibi by fusion",
   "version": "1.1.0",
   "engines": { "vscode": "^1.74.0" },
   "categories": ["Other"],
@@ -29,10 +29,10 @@
         "claudeApiLimits.provider": {
           "type": "string",
           "default": "claude.gg",
-          "enum": ["claude.gg", "vertex.app"],
+          "enum": ["claude.gg", "vertex.claude.gg"],
           "enumDescriptions": [
             "claude.gg — https://claude.gg/api/me?key=sk-...",
-            "vertex.app — https://vertex.app/api/me?key=sk-..."
+            "vertex.claude.gg — https://vertex.claude.gg/api/me?key=sk-..."
           ],
           "description": "API sağlayıcısı"
         },
