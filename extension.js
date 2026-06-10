@@ -1,7 +1,7 @@
 const vscode = require("vscode");
 const https = require("https");
 
-const REFRESH_MS = 30 * 1000;
+const REFRESH_MS = 10 * 60 * 1000;
 
 const PROVIDERS = {
   "claude.gg":        "https://claude.gg/api/me?key=",
@@ -130,7 +130,7 @@ async function refresh() {
     md.appendMarkdown(`**Saatlik**\n`);
     md.appendMarkdown(`- Kalan: \`${h.remaining}\` / \`${h.limit}\` · %${hp}\n`);
     md.appendMarkdown(`- Sıfırlanma: **${timeUntil(h.reset_time)}** içinde\n\n---\n\n`);
-    md.appendMarkdown(`_Tıkla: yenile · 30sn oto · Provider: ${provider}_`);
+    md.appendMarkdown(`_Tıkla: yenile · 10dk oto · Provider: ${provider}_`);
     statusBar.tooltip = md;
   } catch (e) {
     if (e.message === "NO_KEY") {
